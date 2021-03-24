@@ -1,0 +1,51 @@
+{
+  "name": "jsts-interview-project",
+  "version": "1.0.0",
+  "description": "Interview project for InQool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html -d build",
+    "format": "prettier \"src/**/*.{js.html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DohnalMichal/jsts-interview-project.git"
+  },
+  "author": "Michal Dohnal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DohnalMichal/jsts-interview-project/issues"
+  },
+  "homepage": "https://github.com/DohnalMichal/jsts-interview-project#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^2.2.1"
+  }
+}
