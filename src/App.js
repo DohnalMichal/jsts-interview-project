@@ -1,11 +1,14 @@
 import React from "react";
-import Searchbar from "./components/Searchbar";
+import Searchbar, { user } from "./components/Searchbar";
+import UserCard from "./components/UserCard";
+
 import "/styles.scss";
 
 const App = () => {
   return (
     <div>
       <Searchbar />
+      <UserCard />
     </div>
   );
 };
