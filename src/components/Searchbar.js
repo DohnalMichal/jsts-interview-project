@@ -1,14 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
-import {
-  TextField,
-  Button,
-  Typography,
-  Card,
-  CardHeader,
-  Box
-} from "@material-ui/core";
+import React, { useState } from "react";
+import { TextField, Button } from "@material-ui/core";
 import UserCard from "./UserCard";
-import { getRepos, getUserData } from "../api/github-api";
+import { getRepos, getUserData } from "../api/github-api.ts";
+import Repositories from "./Repositories";
 
 const Searchbar = () => {
   const [username, setUsername] = useState("");
@@ -24,10 +18,9 @@ const Searchbar = () => {
 
   const searchUser = () => {
     getUserData(username).then((data) => {
-      console.log(data.user);
       setUser(data.user);
-    })
-  }
+    });
+  };
   const searchRepos = () => {
     setLoading(true);
     getRepos(username).then((data) => {
@@ -36,20 +29,6 @@ const Searchbar = () => {
       console.log("Data:", data);
     });
     console.log("Repos: ", repos);
-  };
-
-  const renderRepo = (repo) => {
-    return (
-      <Card style={{ marginTop: "1em", padding: "1em" }}>
-        <Box display="flex" flexDirection="row">
-          {repo.description ? (
-            <Typography>{`${repo.name} ${repo.description}`}</Typography>
-          ) : (
-            <Typography>{`${repo.name} `}</Typography>
-          )}
-        </Box>
-      </Card>
-    );
   };
 
   return (
@@ -76,11 +55,8 @@ const Searchbar = () => {
           {loading ? "Searching..." : "Search"}
         </Button>
       </form>
-      <UserCard user={user} />
-      {console.log(user)}
-      <Box display="flex" flexDirection="column">
-        {repos.map(renderRepo)}
-      </Box>
+      {user.id ? <UserCard user={user} /> : <div></div>}
+      {repos[0] ? <Repositories rows={repos} loading={loading} /> : <div></div>}
     </div>
   );
 };
