@@ -3,12 +3,14 @@ import { TextField, Button } from "@material-ui/core";
 import UserCard from "./UserCard";
 import { getRepos, getUserData } from "../api/github-api.ts";
 import Repositories from "./Repositories";
+import Organisations from "./Organisations";
 
 const Searchbar = () => {
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState({});
   const [repos, setRepos] = useState([]);
+  const [orgs, setOrgs] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +21,8 @@ const Searchbar = () => {
   const searchUser = () => {
     getUserData(username).then((data) => {
       setUser(data.user);
+      setOrgs(data.orgs);
+      console.log(data.orgs)
     });
   };
   const searchRepos = () => {
@@ -56,7 +60,9 @@ const Searchbar = () => {
         </Button>
       </form>
       {user.id ? <UserCard user={user} /> : <div></div>}
-      {repos[0] ? <Repositories rows={repos} loading={loading} /> : <div></div>}
+      {repos[0] ? <Repositories rows={repos} /> : <div></div>}
+      {orgs[0] ? <Organisations rows={orgs} /> : <div></div>}
+
     </div>
   );
 };
