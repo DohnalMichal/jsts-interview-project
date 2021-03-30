@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.scss"],"names":[],"mappings":"AAAA,KACE,sBAEF,iBAGE,mBAEF,KACE,QAAA,CACA,SAAA,CACA,YAAA,CACA","file":"src.95996e74.css","sourceRoot":"../src","sourcesContent":["html {\n  box-sizing: border-box;\n}\n*,\n*:before,\n*:after {\n  box-sizing: inherit;\n}\nbody {\n  margin: 0;\n  padding: 0;\n  display: flex;\n  justify-content: center;\n}\n"]}
