@@ -29,6 +29,7 @@ const Repositories = ({ rows }) => {
           <TableRow>
             <TableCell>Name</TableCell>
             <TableCell>Description</TableCell>
+            <TableCell>Link</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
