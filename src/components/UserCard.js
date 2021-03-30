@@ -11,7 +11,6 @@ import BookIcon from "@material-ui/icons/Book";
 import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 
 const UserCard = ({ user }) => {
-  console.log(user);
   if (user.id) {
     return (
       <Card style={{ marginTop: "2em", paddingBottom: "2em" }}>

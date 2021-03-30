@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route, Link, BrowserRouter, Redirect } from "react-router-dom";
-import { TextField, Button, Box, Tabs, Tab } from "@material-ui/core";
+import { Switch, Route, Link, BrowserRouter } from "react-router-dom";
+import { TextField, Button, Tabs, Tab } from "@material-ui/core";
 import { getRepos, getUserData } from "../api/github-api.ts";
 import UserCard from "./UserCard";
 import Repositories from "./Repositories";
