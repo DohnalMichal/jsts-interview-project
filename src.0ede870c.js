@@ -1049,4 +1049,4 @@ var e=require("@babel/runtime/helpers/typeof").default;function t(){if("function
 },{"react":"n8MK","./components/Searchbar":"RZka","./styles.scss":"I4sy"}],"Focm":[function(require,module,exports) {
 "use strict";var e=u(require("react")),t=require("react-dom"),r=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}(0,t.render)(e.default.createElement(e.default.StrictMode,null,e.default.createElement(r.default,null)),document.getElementById("root"));
 },{"react":"n8MK","react-dom":"NKHc","./App":"lY9v"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.0ede870c.js.map
+//# sourceMappingURL=src.0ede870c.js.map
